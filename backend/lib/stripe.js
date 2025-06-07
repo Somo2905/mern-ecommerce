@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 import dotenv from "dotenv";
-
-dotenv.config();
+import path from "path";
+dotenv.config({ path: path.resolve("backend/.env") });
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
